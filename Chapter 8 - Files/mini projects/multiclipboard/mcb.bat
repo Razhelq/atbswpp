@@ -1,0 +1,1 @@
+@pyw.exe F:\Python repositiories\AtBSwPP\Chapter 8 - Files\mini projects\multiclipboard\mcb.pyw %*
