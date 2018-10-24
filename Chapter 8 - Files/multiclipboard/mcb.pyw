@@ -21,6 +21,6 @@ elif len(sys.argv) == 2:
     elif sys.argv[1].lower() == 'delete':
         for value in mcb_shelf:
             del mcb_shelf[value]
-            
+
 
 mcb_shelf.close()
