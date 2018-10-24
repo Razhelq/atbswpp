@@ -25,30 +25,29 @@ for quizNum in range(35):
     quiz_file.write('Name:\n\nDate:\n\nPeriod:\n\n')
     quiz_file.write((' ' * 20) + 'State Capitals Quiz (Form %s)' % (quiz_num + 1))
     quiz_file.write('\n\n')
-    Shuffle the order of the states.
+
+    # Shuffle the order of the states.
     states = list(capitals.keys())
     random.shuffle(states)
 
     # Loop through all 50 states, making a question for each.
     for question_num in range(50):
+        # Get right and wrong answers.
+        correct_answer = capitals[states[question_num]]
+        wrong_answers = list(capitals.values())
+        del wrong_answers[wrong_answers.index(correct_answer)]
+        wrong_answers = random.sample(wrong_aAnswers, 3)
+        answer_options = wrong_answers + [correct_answer]
+        random.shuffle(answer_options)
 
-    # Get right and wrong answers.
-    correct_answer = capitals[states[question_num]]
-    wrong_answers = list(capitals.values())
-    del wrong_answers[wrong_answers.index(correct_answer)]
-    wrong_answers = random.sample(wrong_aAnswers, 3)
-    answer_options = wrong_answers + [correct_answer]
-    random.shuffle(answer_options)
-
-    #  Write the question and the answer options to the quiz file.
-    quiz_file.write('%s. What is the capital of %s?\n' % (question_num + 1,
-    states[question_num]))
-    for i in range(4):
-        quiz_file.write(' %s. %s\n' % ('ABCD'[i], answer_options[i]))
+        # Write the question and the answer options to the quiz file.
+        quiz_file.write('%s. What is the capital of %s?\n' % (question_num + 1, states[question_num]))
+        for i in range(4):
+            quiz_file.write(' %s. %s\n' % ('ABCD'[i], answer_options[i]))
         quiz_file.write('\n')
 
-    # Write the answer key to a file.
-    answer_key_file.write('%s. %s\n' % (question_num + 1, 'ABCD'[
-    answer_options.index(correct_answer)]))
+        # Write the answer key to a file.
+        answer_key_file.write('%s. %s\n' % (question_num + 1, 'ABCD'[answer_options.index(correct_answer)]))
+
     quiz_file.close()
     answer_key_file.close()
