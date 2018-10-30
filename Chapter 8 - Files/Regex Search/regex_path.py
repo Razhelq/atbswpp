@@ -1,3 +1,5 @@
+# Searches for a line which includes the regex in the files from the selected location
+
 import os, re
 
 files = os.listdir('./to_search')
