@@ -1,3 +1,6 @@
+# The app replaces the key words from the text filled with inputed words
+
+
 text_file = open('text_to_fill.txt')
 
 words = text_file.read()
