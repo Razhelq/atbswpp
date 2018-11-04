@@ -1,5 +1,5 @@
 # filling_in_the_gaps.py - fins all files with a given prefix and locates any gaps in the numbering.
-# Renames all the later foiles to close this gap.
+# Insert gaps into numbered files so that the new file can be added.
 
 
 import os, shutil, re
@@ -18,7 +18,8 @@ def filling_in_the_gaps(folder):
                     num = '0' * (3-len(str(int(number)))) + str(numbero)
                     numbero += 1
 
-                    shutil.move(os.path.join(folder_name, filename), os.path.join(folder_name, 'spam{}.txt'.format(num)))
+                    f = open('spam{}.txt'.format(num), 'w')
+                    f.close()
 
 filling_in_the_gaps('.')
 
