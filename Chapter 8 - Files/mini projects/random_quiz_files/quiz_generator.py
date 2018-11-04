@@ -43,11 +43,11 @@ for quizNum in range(35):
         # Write the question and the answer options to the quiz file.
         quiz_file.write('%s. What is the capital of %s?\n' % (question_num + 1, states[question_num]))
         for i in range(4):
-            quiz_file.write(' %s. %s\n' % ('ABCD'[i], answer_options[i]))
+            quiz_file.write(' {}. {}\n'.format('ABCD'[i], answer_options[i]))
         quiz_file.write('\n')
 
         # Write the answer key to a file.
-        answer_key_file.write('%s. %s\n' % (question_num + 1, 'ABCD'[answer_options.index(correct_answer)]))
+        answer_key_file.write('{}. {}\n'.format(question_num + 1, 'ABCD'[answer_options.index(correct_answer)]))
 
     quiz_file.close()
     answer_key_file.close()
