@@ -1,7 +1,7 @@
 # im_feeling_lucky.py - Opens several Google search results
 
 
-import request, sys, webbrowser, bs4
+import requests, sys, webbrowser, bs4
 
 
 print('Googling...')
