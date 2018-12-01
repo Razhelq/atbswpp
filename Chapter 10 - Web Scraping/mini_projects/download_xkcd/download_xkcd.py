@@ -29,9 +29,6 @@ while not url.endswith('#'):
         except MissingSchema:
             # skip this comic
             prev_link = soup.select('a[rel="prev"]')[0]
-
-            print(prev_link)
-            print(prev_link.get('href'))
             url = 'http://xkcd.com' + prev_link.get('href')
             continue
         image_file = open(os.path.join('xkcd', os.path.basename(comic_url)), 'wb')
