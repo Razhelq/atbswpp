@@ -9,5 +9,8 @@ Chapter 4 - Lists<br>
 Chapter 5 - Dictionary<br>
 Chapter 6 - Manipulating Strings<br>
 Chapter 7 - Regular Expressions<br>
+Chapter 8 - Files<br>
+Chapter 9 - Debugging<br>
+Chapter 10 - Web Scrapping<br>
 
 * Work in progress
