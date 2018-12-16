@@ -1,4 +1,4 @@
-import openpyxl, os, sys
+import openpyxl, sys
 
 file = sys.argv[1]
 
@@ -14,5 +14,3 @@ for c in range(1, sheet.max_column + 1):
         else:
             pass
     txt_file.close()
-
-
