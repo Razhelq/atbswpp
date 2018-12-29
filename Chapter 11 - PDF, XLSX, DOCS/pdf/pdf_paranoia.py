@@ -1,3 +1,5 @@
+# pdf_paranoia.py - finds all pdf files in current working directory and encrypt them with provided password
+
 import sys, PyPDF2, os
 
 pw = sys.argv[1]
