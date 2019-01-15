@@ -19,4 +19,3 @@ for row_num in range(2, sheet.max_row): # skip the first row
         sheet.cell(row=row_num, column=2).value = PRICE_UPDATES[produce_name]
 
 wb.save('updated_produce_sales.xlsx')
-
