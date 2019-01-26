@@ -12,5 +12,7 @@ Chapter 7 - Regular Expressions<br>
 Chapter 8 - Files<br>
 Chapter 9 - Debugging<br>
 Chapter 10 - Web Scrapping<br>
+Chapter 11 - PDF, XLSX, DOCS, CSV, JSON<br>
+Chapter 12 - Emails<br>
 
 * Work in progress
